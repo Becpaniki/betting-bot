@@ -68,10 +68,23 @@ async def show_sports_selection(callback_query: types.CallbackQuery):
 
 async def show_matches_list(callback_query: types.CallbackQuery, sport: str):
     """Show list of popular matches for selected sport"""
+    from datetime import datetime, timedelta
+
     db = SessionLocal()
     try:
-        # Get matches from database
-        matches = get_matches_by_sport(db, sport, limit=10)
+        # Get matches from database - only today and tomorrow
+        now = datetime.utcnow()
+        tomorrow = now + timedelta(days=2)
+
+        matches = db.query(Match).filter(
+            Match.sport == sport,
+            Match.start_time >= now,
+            Match.start_time <= tomorrow
+        ).order_by(Match.start_time).limit(10).all()
+
+        if not matches:
+            # Fallback to all matches
+            matches = get_matches_by_sport(db, sport, limit=10)
 
         if not matches:
             emoji = SPORT_EMOJI.get(sport, "🏟")
