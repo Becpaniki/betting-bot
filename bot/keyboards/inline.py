@@ -7,31 +7,6 @@ def get_main_menu_keyboard() -> InlineKeyboardMarkup:
         [
             InlineKeyboardButton(text="🔥 Матчи дня", callback_data="matches:today"),
         ],
-        [
-            InlineKeyboardButton(text="⚽ Виды спорта", callback_data="sport:all"),
-        ],
-    ])
-    return keyboard
-
-
-def get_sports_keyboard() -> InlineKeyboardMarkup:
-    """Клавиатура выбора вида спорта"""
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [
-            InlineKeyboardButton(text="⚽ Футбол", callback_data="sport:football"),
-            InlineKeyboardButton(text="🏀 Баскетбол", callback_data="sport:basketball"),
-        ],
-        [
-            InlineKeyboardButton(text="🏒 Хоккей", callback_data="sport:hockey"),
-            InlineKeyboardButton(text="🎾 Теннис", callback_data="sport:tennis"),
-        ],
-        [
-            InlineKeyboardButton(text="🎮 Киберспорт", callback_data="sport:esports"),
-            InlineKeyboardButton(text="📋 Все виды", callback_data="sport:all"),
-        ],
-        [
-            InlineKeyboardButton(text="◀️ Назад", callback_data="menu:main"),
-        ],
     ])
     return keyboard
 

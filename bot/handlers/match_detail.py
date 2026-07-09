@@ -137,6 +137,6 @@ def format_all_odds(odds_list, match: Match) -> str:
 
 def get_detail_back_keyboard(sport: str) -> InlineKeyboardMarkup:
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="◀️ К списку матчей", callback_data=f"sport:{sport}")]
+        [InlineKeyboardButton(text="◀️ К списку матчей", callback_data=f"matches:sport_{sport}")]
     ])
     return keyboard
