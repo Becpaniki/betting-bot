@@ -11,12 +11,9 @@ from analytics.value_finder import ValueFinder
 SPORT_EMOJI = {
     "football": "⚽",
     "basketball": "🏀",
-    "hockey": "🏒",
     "tennis": "🎾",
     "baseball": "⚾",
-    "cricket": "🏏",
     "martial": "🥊",
-    "american_football": "🏈",
 }
 
 value_finder = ValueFinder()

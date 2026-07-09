@@ -10,23 +10,17 @@ from parsers.match_analytics import match_analytics
 SPORT_EMOJI = {
     "football": "⚽",
     "basketball": "🏀",
-    "hockey": "🏒",
     "tennis": "🎾",
     "baseball": "⚾",
-    "cricket": "🏏",
     "martial": "🥊",
-    "american_football": "🏈",
 }
 
 SPORT_NAMES = {
     "football": "Футбол",
     "basketball": "Баскетбол",
-    "hockey": "Хоккей",
     "tennis": "Теннис",
     "baseball": "Бейсбол",
-    "cricket": "Крикет",
     "martial": "Боевые виды",
-    "american_football": "Американский футбол",
 }
 
 
@@ -136,11 +130,7 @@ def get_sports_list_keyboard() -> InlineKeyboardMarkup:
             InlineKeyboardButton(text="⚾ Бейсбол", callback_data="sport:baseball"),
         ],
         [
-            InlineKeyboardButton(text="🏏 Крикет", callback_data="sport:cricket"),
             InlineKeyboardButton(text="🥊 Боевые", callback_data="sport:martial"),
-        ],
-        [
-            InlineKeyboardButton(text="🏈 Амер. футбол", callback_data="sport:american_football"),
         ],
         [
             InlineKeyboardButton(text="◀️ Назад", callback_data="menu:main"),

@@ -129,38 +129,24 @@ class OddsAPIParser:
         return "other"
 
 
-# Sport keys for The Odds API (active leagues)
+# Sport keys for The Odds API (top leagues only, to stay within 500 req/month)
 SPORT_KEYS = {
     "football": [
         "soccer_epl",
         "soccer_spain_la_liga",
-        "soccer_germany_bundesliga",
         "soccer_italy_serie_a",
-        "soccer_france_ligue_one",
-        "soccer_uefa_champs_league",
-        "soccer_usa_mls",
     ],
     "basketball": [
         "basketball_nba_summer_league",
-        "basketball_wnba",
     ],
     "tennis": [
         "tennis_atp_wimbledon",
-        "tennis_wta_wimbledon",
     ],
     "baseball": [
         "baseball_mlb",
     ],
-    "cricket": [
-        "cricket_international_t20",
-        "cricket_t20_blast",
-    ],
     "martial": [
         "mma_mixed_martial_arts",
-        "boxing_boxing",
-    ],
-    "american_football": [
-        "americanfootball_nfl_preseason",
     ],
 }
 
