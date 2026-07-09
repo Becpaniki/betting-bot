@@ -145,9 +145,6 @@ SPORT_KEYS = {
     "baseball": [
         "baseball_mlb",
     ],
-    "martial": [
-        "mma_mixed_martial_arts",
-    ],
 }
 
 # Singleton

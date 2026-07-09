@@ -12,7 +12,6 @@ SPORT_EMOJI = {
     "basketball": "🏀",
     "tennis": "🎾",
     "baseball": "⚾",
-    "martial": "🥊",
 }
 
 SPORT_NAMES = {
@@ -20,7 +19,6 @@ SPORT_NAMES = {
     "basketball": "Баскетбол",
     "tennis": "Теннис",
     "baseball": "Бейсбол",
-    "martial": "Боевые виды",
 }
 
 
@@ -128,9 +126,6 @@ def get_sports_list_keyboard() -> InlineKeyboardMarkup:
         [
             InlineKeyboardButton(text="🎾 Теннис", callback_data="sport:tennis"),
             InlineKeyboardButton(text="⚾ Бейсбол", callback_data="sport:baseball"),
-        ],
-        [
-            InlineKeyboardButton(text="🥊 Боевые", callback_data="sport:martial"),
         ],
         [
             InlineKeyboardButton(text="◀️ Назад", callback_data="menu:main"),
