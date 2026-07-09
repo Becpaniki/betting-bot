@@ -5,15 +5,10 @@ def get_main_menu_keyboard() -> InlineKeyboardMarkup:
     """Главное меню бота"""
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [
+            InlineKeyboardButton(text="🔥 Матчи дня", callback_data="matches:today"),
+        ],
+        [
             InlineKeyboardButton(text="⚽ Виды спорта", callback_data="sport:all"),
-            InlineKeyboardButton(text="💰 Value-ставки", callback_data="value:show"),
-        ],
-        [
-            InlineKeyboardButton(text="📊 Сравнение коэффициентов", callback_data="odds:compare"),
-            InlineKeyboardButton(text="🔮 Прогнозы", callback_data="predictions:show"),
-        ],
-        [
-            InlineKeyboardButton(text="⚙️ Настройки", callback_data="settings:show"),
         ],
     ])
     return keyboard
