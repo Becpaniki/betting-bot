@@ -19,7 +19,7 @@ class Config:
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///betting.db")
 
     # Настройки парсинга
-    PARSE_INTERVAL_MINUTES: int = 180  # каждые 3 часа (экономия API: 500 req/month)
+    PARSE_INTERVAL_MINUTES: int = 480  # каждые 8 часов (3 раза/день × 5 лиг = 15 req/day ≈ 450/month)
     REQUEST_DELAY_SECONDS: float = 3.0
     USER_AGENT: str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
