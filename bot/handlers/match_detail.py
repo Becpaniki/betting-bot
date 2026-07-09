@@ -13,7 +13,10 @@ SPORT_EMOJI = {
     "basketball": "🏀",
     "hockey": "🏒",
     "tennis": "🎾",
-    "esports": "🎮",
+    "baseball": "⚾",
+    "cricket": "🏏",
+    "martial": "🥊",
+    "american_football": "🏈",
 }
 
 value_finder = ValueFinder()

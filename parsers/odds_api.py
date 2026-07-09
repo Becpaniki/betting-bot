@@ -118,10 +118,18 @@ class OddsAPIParser:
             return "hockey"
         elif "tennis" in sport_key:
             return "tennis"
+        elif "baseball" in sport_key:
+            return "baseball"
+        elif "cricket" in sport_key:
+            return "cricket"
+        elif "mma" in sport_key or "boxing" in sport_key:
+            return "martial"
+        elif "americanfootball" in sport_key:
+            return "american_football"
         return "other"
 
 
-# Sport keys for The Odds API
+# Sport keys for The Odds API (active leagues)
 SPORT_KEYS = {
     "football": [
         "soccer_epl",
@@ -130,18 +138,30 @@ SPORT_KEYS = {
         "soccer_italy_serie_a",
         "soccer_france_ligue_one",
         "soccer_uefa_champs_league",
+        "soccer_usa_mls",
     ],
     "basketball": [
-        "basketball_nba",
-        "basketball_euroleague",
-    ],
-    "hockey": [
-        "icehockey_nhl",
+        "basketball_nba_summer_league",
+        "basketball_wnba",
     ],
     "tennis": [
         "tennis_atp_wimbledon",
-        "tennis_atp_us_open",
-    ]
+        "tennis_wta_wimbledon",
+    ],
+    "baseball": [
+        "baseball_mlb",
+    ],
+    "cricket": [
+        "cricket_international_t20",
+        "cricket_t20_blast",
+    ],
+    "martial": [
+        "mma_mixed_martial_arts",
+        "boxing_boxing",
+    ],
+    "american_football": [
+        "americanfootball_nfl_preseason",
+    ],
 }
 
 # Singleton
